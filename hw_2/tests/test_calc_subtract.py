@@ -1,22 +1,22 @@
 import pytest
-from hw_4.src.calculator import Calculator
+from hw_2.src.calculator import Calculator
 
-data_test_positive = [(-7, -2, 14),
-                      (89, 57, 5073),
-                      (-24.5, -12.7, 311.15),
-                      (24.7, 14.7, 363.09),
-                      (-12.4, 45.4, -562.96),
-                      (-47, 89, -4183),
+data_test_positive = [(-7, -2, -5),
+                      (89, 57, 32),
+                      (-24.5, -12.7, -11.8),
+                      (24.7, 14.7, 10),
+                      (-12.4, 45.4, -57.8),
+                      (-47, 89, -136),
                       (0, 0, 0),
-                      (0, 67, 0),
-                      (0, -59, 0),
-                      (0, -47.8, 0),
-                      (0, 89.4, 0)]
+                      (0, 67, -67,),
+                      (0, -59, 59),
+                      (0, -47.8, 47.8),
+                      (0, 89.4, -89.4)]
 
 @pytest.mark.parametrize('val1, val2, result', data_test_positive)
-def test_multiply_positive(val1, val2, result):
+def test_subtract_positive(val1, val2, result):
     calc = Calculator()
-    assert calc.multiply(val1, val2) == result
+    assert calc.subtract(val1, val2) == result
 
 
 data_test_negative = [(None, None, pytest.raises(TypeError)),
@@ -35,7 +35,7 @@ data_test_negative = [(None, None, pytest.raises(TypeError)),
                       (int, list, pytest.raises(TypeError))]
 
 @pytest.mark.parametrize('val1, val2, result', data_test_negative)
-def test_multiply_negative(val1, val2, result):
+def test_subtract_negative(val1, val2, result):
     calc = Calculator()
     with result:
-        assert calc.multiply(val1, val2) == result
+        assert calc.subtract(val1, val2) == result

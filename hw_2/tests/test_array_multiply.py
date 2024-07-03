@@ -1,5 +1,5 @@
 import pytest
-from hw_4.src.array import Array
+from hw_2.src.array import Array
 
 data_test_positive = [([-7, -2, -4, -8], 448),
                       ([9, 5, 8, 8], 2880),

@@ -1,6 +1,6 @@
 import pytest
-from hw_2.src.main import average
-from hw_2.src.main import factorial
+from hw_1.src.main import average
+from hw_1.src.main import factorial
 
 data_test1 = [([], ValueError),
              ([5], 5),

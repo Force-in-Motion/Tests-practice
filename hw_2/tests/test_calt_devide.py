@@ -1,5 +1,5 @@
 import pytest
-from hw_4.src.calculator import Calculator
+from hw_2.src.calculator import Calculator
 
 data_test_positive = [(-7, -2, 3.5),
                       (950, 2, 475),

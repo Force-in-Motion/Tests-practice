@@ -1,5 +1,5 @@
 import pytest
-from hw_4.src.user import User
+from hw_2.src.user import User
 
 data_test_positive = [('vasya', 15, User('vasya', 15)),
                       ('roma', 45, User('roma', 45)),
